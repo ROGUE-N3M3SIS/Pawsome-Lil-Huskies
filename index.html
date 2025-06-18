@@ -6,7 +6,6 @@
     <title>Pawesome Lil Huskies</title>
     <link rel="icon" type="image/png" href="favicon.png">
 
-
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -36,28 +35,23 @@
             padding: 20px;
             max-width: 800px;
             text-align: center;
-            overflow-x: hidden;
-            position: relative; /* Ensure snowflakes are positioned relative to the container */
+            position: relative;
         }
         .intro {
             font-size: 1.2em;
             margin-bottom: 20px;
         }
-        .left-align {
-            text-align: left;
-        }
         .carousel {
             display: flex;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            margin-bottom: 20px;
-            max-width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
         }
-        .carousel img {
-            scroll-snap-align: center;
-            margin-right: 10px;
+        .carousel img, .merged-image {
             max-width: 100%;
             height: auto;
+            display: block;
+            margin: 0 auto;
         }
         .tabs {
             display: flex;
@@ -77,42 +71,9 @@
         .tab-content.active {
             display: block;
         }
-        .contact, .health-guarantee {
+        .contact {
             margin-top: 20px;
         }
-        .contact h2, .health-guarantee h2 {
-            margin-bottom: 10px;
-        }
-        .snowflake {
-            position: absolute;
-            top: 0;
-            width: 10px;
-            height: 10px;
-            background-color: white;
-            border-radius: 50%;
-            opacity: 0.8;
-            animation: fall linear infinite;
-            pointer-events: none; /* Ensure snowflakes don't interfere with user interactions */
-        }
-        @keyframes fall {
-            to {
-                transform: translateY(calc(100vh - 10px)); /* Stop at the bottom of the viewport */
-            }
-        }
-        /* Add individual sizing for each image */
-        #image1, #image2, #image3, #image4, #image5 {
-            width: 100%;
-            max-width: 800px;
-            height: auto;
-        }
-        .merged-image {
-            width: 80%;
-            max-width: 800px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-        }
-        /* Media Queries for Responsive Design */
         @media (max-width: 600px) {
             h1 {
                 font-size: 2em;
@@ -123,40 +84,11 @@
             .intro {
                 font-size: 1em;
             }
+            .carousel img {
+                max-width: 90%;
+            }
         }
     </style>
-    <script>
-        function createSnowflake() {
-            const snowflake = document.createElement('div');
-            snowflake.classList.add('snowflake');
-            snowflake.style.left = Math.random() * window.innerWidth + 'px';
-            snowflake.style.animationDuration = Math.random() * 3 + 7 + 's';
-            snowflake.style.opacity = Math.random();
-            document.body.appendChild(snowflake);
-            
-            setTimeout(() => {
-                snowflake.remove();
-            }, 10000);
-        }
-        
-        setInterval(createSnowflake, 100);
-
-        function showTab(tabId) {
-            const tabs = document.querySelectorAll('.tab');
-            const tabContents = document.querySelectorAll('.tab-content');
-
-            tabs.forEach(tab => {
-                tab.classList.remove('active');
-            });
-
-            tabContents.forEach(content => {
-                content.classList.remove('active');
-            });
-
-            document.querySelector(`#${tabId}`).classList.add('active');
-            document.querySelector(`.tab[onclick="showTab('${tabId}')"]`).classList.add('active');
-        }
-    </script>
 </head>
 <body>
     <header>
@@ -164,24 +96,16 @@
     </header>
     <div class="container">
         <div class="intro">
-            Welcome to Pawesome Lil Huskies!<br>We are passionate about breeding playful and outgoing Miniature Siberian Huskies.
-            <img src="https://rogue-n3m3sis.github.io/Pawsome-Lil-Huskies/merged.jpg" alt="Cute Husky" class="merged-image">
-            <div class="left-align">
-                <br>Our furbabies are not only adorable but also well-socialized, making them perfect companions for:
-                <ul>
-                    <li>Families</li>
-                    <li>Emotional Support Animals (ESA)</li>
-                    <li>Even apartment living.</li>
-                </ul>
-                <br>Each of our pups and their parents hold wellness certificates from the vet, ensuring you bring home a healthy and happy new family member.
-            </div>
+            Welcome to Pawesome Lil Huskies! We are passionate about breeding playful and outgoing Miniature Siberian Huskies.
+            <img src="merged.jpg" alt="Cute Husky" class="merged-image">
+            <p>Each pup is well-socialized and holds a wellness certificate from the vet.</p>
         </div>
         <div class="carousel">
-            <img src="https://rogue-n3m3sis.github.io/Pawsome-Lil-Huskies/nolitters.png" alt="Husky Image">
-            <img src="https://rogue-n3m3sis.github.io/Pawsome-Lil-Huskies/nolitters.png" alt="Husky Image">
-	    <img src="https://rogue-n3m3sis.github.io/Pawsome-Lil-Huskies/nolitters.png" alt="Husky Image">
-	    <img src="https://rogue-n3m3sis.github.io/Pawsome-Lil-Huskies/nolitters.png" alt="Husky Image">
-	    <img src="https://rogue-n3m3sis.github.io/Pawsome-Lil-Huskies/nolitters.png" alt="Husky Image">
+            <img src="nolitters.png" alt="Husky Image">
+            <img src="nolitters.png" alt="Husky Image">
+            <img src="nolitters.png" alt="Husky Image">
+            <img src="nolitters.png" alt="Husky Image">
+            <img src="nolitters.png" alt="Husky Image">
         </div>
         <div class="tabs">
             <div class="tab" onclick="showTab('facts')">Facts</div>
@@ -190,39 +114,32 @@
         <div id="facts" class="tab-content">
             <h2>Facts</h2>
             <ul>
-                <li>Height: 13-17 inches, 330-432mm.</li>
-                <li>Weight: 20-35 pounds, 9-16kg.</li>
+                <li>Height: 13-17 inches</li>
+                <li>Weight: 20-35 pounds</li>
                 <li>Life Expectancy: 12-15 years</li>
-                <li>Coat: Thick double coat that sheds seasonally</li>
                 <li>Temperament: Playful, outgoing, and friendly</li>
-                <li>Good with children and other pets</li>
-                <li>Requires regular exercise to stay healthy and happy</li>
-                <li>Highly intelligent and trainable</li>
-                <li>Known for their striking blue or multicolored eyes</li>
-                <li>Adaptable to various living environments, including apartments</li>
             </ul>
         </div>
         <div id="training" class="tab-content">
             <h2>Training Tips</h2>
             <ul>
-                <li>Start training early to establish good habits and build a strong bond</li>
-                <li>Use positive reinforcement techniques such as treats, praise, and play</li>
-                <li>Be consistent with commands and rewards to avoid confusion</li>
-                <li>Socialize your furbaby with other dogs and people to ensure they are well-adjusted</li>
-                <li>Potty training: Establish a routine and take your pup out frequently, especially after meals and naps</li>
-                <li>Crate training: Make the crate a positive and comfortable space with soft bedding and toys</li>
-                <li>Teach basic commands like sit, stay, come, and leave it</li>
-                <li>Provide mental stimulation with puzzle toys and interactive games</li>
-                <li>Enroll in a puppy training class for professional guidance and socialization opportunities</li>
-                <li>Be patient and persistent, as training takes time and consistency</li>
-			</ul>
+                <li>Use positive reinforcement like treats and praise.</li>
+                <li>Potty training: Establish a routine.</li>
+                <li>Crate training: Make it a cozy space.</li>
+            </ul>
         </div>
         <div class="contact">
             <h2>Contact Us</h2>
             <p>Email: Pawsomelilhuskies@gmail.com</p>
             <p>Phone: (320) 763-334-3240</p>
-            <p>Address: 445 Central Ave S, Milaca, MN 56353</p>
         </div>
     </div>
+    <script>
+        function showTab(tabId) {
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabContents.forEach(content => content.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
 </body>
 </html>

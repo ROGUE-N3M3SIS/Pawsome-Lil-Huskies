@@ -19,6 +19,7 @@
             align-items: center;
             min-height: 100vh;
             overflow-x: hidden;
+            position: relative; /* Needed for snowflake positioning */
         }
         header {
             background-color: #0074D9;
@@ -43,15 +44,15 @@
         }
         .carousel {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
             gap: 10px;
         }
-        .carousel img, .merged-image {
+        .carousel img {
+            scroll-snap-align: center;
             max-width: 100%;
             height: auto;
-            display: block;
-            margin: 0 auto;
+            margin: 0 5px;
         }
         .tabs {
             display: flex;
@@ -88,6 +89,24 @@
                 max-width: 90%;
             }
         }
+        /* Snowflake Animation */
+        .snowflake {
+            position: absolute;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
     </style>
 </head>
 <body>
@@ -114,18 +133,31 @@
         <div id="facts" class="tab-content">
             <h2>Facts</h2>
             <ul>
-                <li>Height: 13-17 inches</li>
-                <li>Weight: 20-35 pounds</li>
+               <li>Height: 13-17 inches, 330-432mm.</li>
+                <li>Weight: 20-35 pounds, 9-16kg.</li>
                 <li>Life Expectancy: 12-15 years</li>
+                <li>Coat: Thick double coat that sheds seasonally</li>
                 <li>Temperament: Playful, outgoing, and friendly</li>
+                <li>Good with children and other pets</li>
+                <li>Requires regular exercise to stay healthy and happy</li>
+                <li>Highly intelligent and trainable</li>
+                <li>Known for their striking blue or multicolored eyes</li>
+                <li>Adaptable to various living environments, including apartments</li>
             </ul>
         </div>
         <div id="training" class="tab-content">
             <h2>Training Tips</h2>
             <ul>
-                <li>Use positive reinforcement like treats and praise.</li>
-                <li>Potty training: Establish a routine.</li>
-                <li>Crate training: Make it a cozy space.</li>
+                <li>Start training early to establish good habits and build a strong bond</li>
+                <li>Use positive reinforcement techniques such as treats, praise, and play</li>
+                <li>Be consistent with commands and rewards to avoid confusion</li>
+                <li>Socialize your furbaby with other dogs and people to ensure they are well-adjusted</li>
+                <li>Potty training: Establish a routine and take your pup out frequently, especially after meals and naps</li>
+                <li>Crate training: Make the crate a positive and comfortable space with soft bedding and toys</li>
+                <li>Teach basic commands like sit, stay, come, and leave it</li>
+                <li>Provide mental stimulation with puzzle toys and interactive games</li>
+                <li>Enroll in a puppy training class for professional guidance and socialization opportunities</li>
+                <li>Be patient and persistent, as training takes time and consistency</li>
             </ul>
         </div>
         <div class="contact">
@@ -134,12 +166,28 @@
             <p>Phone: (320) 763-334-3240</p>
         </div>
     </div>
+
     <script>
         function showTab(tabId) {
             const tabContents = document.querySelectorAll('.tab-content');
             tabContents.forEach(content => content.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
         }
+
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = Math.random() * window.innerWidth + 'px';
+            snowflake.style.animationDuration = Math.random() * 3 + 7 + 's';
+            snowflake.style.opacity = Math.random();
+            document.body.appendChild(snowflake);
+
+            setTimeout(() => {
+                snowflake.remove();
+            }, 10000);
+        }
+
+        setInterval(createSnowflake, 100);
     </script>
 </body>
 </html>

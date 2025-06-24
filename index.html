@@ -211,7 +211,7 @@
             snowflake.style.left = Math.random() * window.innerWidth + 'px';
             snowflake.style.animationDuration = Math.random() * 3 + 7 + 's';
             snowflake.style.opacity = Math.random();
-            document.body.appendChild(snowflake);
+            document.querySelector('.snowflake-zone').appendChild(snowflake);
 
             setTimeout(() => {
                 snowflake.remove();
@@ -220,5 +220,6 @@
 
         setInterval(createSnowflake, 100);
     </script>
+    <div class="snoflake-zone"></div>div>
 </body>
 </html>

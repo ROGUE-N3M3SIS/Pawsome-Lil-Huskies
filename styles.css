@@ -1,0 +1,285 @@
+/* === Global Box Sizing Reset === */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* === Base Styles === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('lightthemebg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  transition: background-image 0.5s ease-in-out;
+}
+
+/* === Header Styles === */
+header {
+  background-color: rgba(179, 217, 255, 0);
+  backdrop-filter: blur(3px);
+  padding: 2rem;
+  text-align: center;
+}
+
+/* === Gallery Styles === */
+.gallery {
+  padding: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.gallery-title {
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.gallery-subtext {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #888;
+  margin-top: -1rem;
+  margin-bottom: 1.5rem;
+}
+.gallery-intro {
+  width: 100%;
+  text-align: center;
+}
+.husky-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  padding: 0.5rem;
+  text-align: center;
+  width: 200px;
+}
+.husky-card img {
+  width: 80%;
+  border-radius: 5px;
+}
+.husky-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  padding: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* === Form Styles === */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+form label {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+form input,
+form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 0.25rem;
+}
+form button {
+  margin-top: 1.5rem;
+  padding: 0.75rem;
+  background-color: #4da6ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #3399ff;
+}
+
+/* === Tab Styles === */
+.tab-button {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  margin: 1.0rem auto;
+  padding: 1.0rem;
+  font-size: 1.1rem;
+  background-color: #4da6ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: left;
+}
+.tab-button:hover {
+  background-color: #3399ff;
+}
+.tab-content {
+  display: none;
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.info-tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 700px;
+}
+.info-tabs .tab-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+.info-tabs .tab-button {
+  flex: 1 1 auto;
+  min-width: 140px;
+  max-width: 200px;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  background-color: #4da6ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+/* === Lightbox Styles === */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+  text-align: center;
+  padding-top: 60px;
+}
+.lightbox-img {
+  max-width: 80%;
+  margin: 1rem auto;
+  display: block;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* === Parent Styles === */
+.parents {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.parent-card {
+  text-align: center;
+}
+.parent-card img {
+  width: 225px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+/* === Family Section Wrapper === */
+.family-section {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+}
+
+/* === Footer Styles === */
+footer {
+  background-color: rgba(179, 217, 255, 0);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* === Snow Canvas Styles === */
+#snow-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+/* === Main Container Styles === */
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+/* === Dark Mode Styles with Frosted Transparency === */
+body.dark-mode {
+  background-image: url('darkthemebg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #f0f0f0;
+}
+
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode .tab-content,
+body.dark-mode form,
+body.dark-mode .parent-card,
+body.dark-mode .husky-card,
+body.dark-mode .info-tabs,
+body.dark-mode .gallery,
+body.dark-mode .hero-title {
+  background-color: rgba(30, 30, 30, 0.0);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #f0f0f0;
+}
+
+body.dark-mode .tab-button,
+body.dark-mode form button {
+  background-color: #555;
+  color: white;
+}
+
+body.dark-mode .tab-button:hover,
+body.dark-mode form button:hover {
+  background-color: #777;
+}
+
+body.dark-mode .tab-content {
+  background-color: rgba(30, 30, 30, 0.0);
+  color: #f0f0f0;
+}

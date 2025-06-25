@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pawsome Lil Huskies | Miniature Husky Puppies</title>
+  <meta name="description" content="Pawsome Lil Huskies is a family-run breeder offering healthy, socialized miniature husky puppies looking for their forever homes." />
+  <meta name="keywords" content="miniature husky, husky puppies, husky breeder, husky adoption, mini huskies for sale" />
+  <meta name="author" content="Pawsome Lil Huskies" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="fav1.png" type="image/png" />
+</head>
+<body>
+<div class="main-container">
+  <canvas id="snow-canvas"></canvas>
+
+  <header>
+	<button id="darkModeToggle">Toggle Dark Mode</button>
+	<h1>Pawsome Lil Huskies</h1>
+    <p><strong>Adorable Minature Huskies looking for their forever homes 🐾</strong></p>
+  </header>
+
+
+<section class="info-tabs">
+  <div class="tab-row">
+    <button class="tab-button" onclick="toggleTab('about-tab')">📖 About Us</button>
+    <button class="tab-button" onclick="toggleTab('facts-tab')">📌 Facts</button>
+    <button class="tab-button" onclick="toggleTab('training-tab')">🎓 Training Tips</button>
+  </div>
+
+<!--- About US--->
+  <div id="about-tab" class="tab-content">
+    <p>We are a small family-run Minature Husky breeder passionate about raising healthy, happy, and well-socialized puppies.</p>
+	<p>Our huskies are part of our family and raised with love and care.</p>
+	<p>While the pups are being raised they will be exposed to:</p>
+		<ul>
+		  <li>Loud and soft noises</li>
+		  <li>The dogs living in the home</li>
+		  <li>Cats that live in the home</li>
+		  <li>Guinea Pig that live in the home</li>
+		  <li>Children ranging from all ages</li>
+		</ul>
+  </div>
+
+  <div id="facts-tab" class="tab-content">
+  <h3>🧠 Temperament</h3>
+  <ul>
+    <li><strong>Intelligent & Loyal:</strong> Mini Huskies are known for their sharp minds and strong loyalty to their families.</li>
+    <li><strong>Affectionate:</strong> They form close bonds with their humans and enjoy being part of the family.</li>
+    <li><strong>Energetic & Playful:</strong> Like their full-sized counterparts, they require regular exercise and mental stimulation.</li>
+    <li><strong>Independent:</strong> They can be a bit stubborn, so early training and consistency are key.</li>
+  </ul>
+
+  <h3>🧥 Fur & Coat</h3>
+  <ul>
+    <li><strong>Type:</strong> Medium-length double coat — thick and fluffy.</li>
+    <li><strong>Colors:</strong> Commonly black and white, red and white, grey and white, agouti, and all white.</li>
+    <li><strong>Shedding:</strong> Heavy shedders, especially during seasonal changes. Regular brushing is essential.</li>
+  </ul>
+
+  <h3>📏 Height and ⚖️ Weight</h3>
+	<p style="margin-top: -10px; font-size: 0.9em; color: #666;"><em>(Averages — may vary per puppy)</em></p>
+  <ul>
+    <li><strong>Males:</strong> 14–17 inches (355–432 mm), 25–35 lbs (11–16 kg)</li>
+    <li><strong>Females:</strong> 13–16 inches (330–406 mm), 20–30 lbs (9–14 kg)</li>
+  </ul>
+
+  <h3>🧍‍♂️ Social Traits</h3>
+  <ul>
+    <li><strong>Pack-Oriented:</strong> Thrive in environments with companionship — human or canine.</li>
+    <li><strong>Friendly:</strong> Generally good with children and other pets if socialized early.</li>
+    <li><strong>Alert but Not Aggressive:</strong> May bark to alert but are not typically guard dogs.</li>
+  </ul>
+</div>
+
+  <div id="training-tab" class="tab-content">
+  <p>Start training early with positive reinforcement. Huskies respond well to consistency and patience. Socialize them with people and other dogs to build confidence.</p>
+  <ul style="list-style-type: none; padding-left: 0;">
+    <li>🐾 Keep training sessions short (5–10 minutes) to maintain focus.</li>
+    <li>🐾 Use high-value treats like chicken or cheese to motivate them.</li>
+    <li>🐾 Crate train gradually to create a safe, calm space.</li>
+    <li>🐾 Practice leash training early — Huskies love to pull!</li>
+    <li>🐾 Teach one command at a time to avoid confusion.</li>
+    <li>🐾 Avoid harsh discipline — use calm, assertive energy.</li>
+    <li>🐾 Pair hand signals with verbal commands for clarity.</li>
+    <li>🐾 Train in different environments to generalize behavior.</li>
+    <li>🐾 Exercise before training to help them focus.</li>
+    <li>🐾 End sessions on a positive note to build confidence.</li>
+    <li>🐾 Be patient — Huskies are smart but independent.</li>
+    <li>🐾 Use consistent routines and commands daily.</li>
+    <li>🐾 Socialize with other dogs and people regularly.</li>
+    <li>🐾 Reward calm behavior, not just tricks or commands.</li>
+    <li>🐾 Keep training fun — play is a great motivator!</li>
+  </ul>
+</div>
+</section>
+
+  <section class="gallery">
+  <h2 class="gallery-title">Meet Our Fur Babies</h2>
+  <div class="gallery-intro">
+    <p class="gallery-subtext"><em>(Click photo to enlarge)</em></p>
+  </div>
+
+  <div class="family-section">
+    <!-- Parents Section -->
+    <div class="parents">
+      <div class="parent-card">
+        <img src="sire.jpg" alt="Sire" title="Sire – Male / Father"/>
+        <p><strong>Sire</strong></p>
+      </div>
+      <div class="parent-card">
+        <img src="dame.jpg" alt="Dame" title="Dame – Female / Mother"/>
+        <p><strong>Dame</strong></p>
+      </div>
+    </div>
+
+    <!-- Puppies Section -->
+    <h2 class="gallery-title">Meet Their Fur Babies</h2>
+    <div class="husky-grid">
+      <div class="husky-card">
+        <img src="images/husky1.jpg" alt="Pup 1" onclick="openGallery('snowball-gallery')" />
+        <p><strong>Unnamed</strong> – 8 weeks old</p>
+      </div>
+      <div class="husky-card">
+        <img src="images/husky2.jpg" alt="Pup 2" onclick="openGallery('luna-gallery')" />
+        <p><strong>Unnamed</strong> – 10 weeks old</p>
+      </div>
+      <div class="husky-card">
+        <img src="images/husky3.jpg" alt="Pup 3" onclick="openGallery('max-gallery')" />
+        <p><strong>Unnamed</strong> – 9 weeks old</p>
+      </div>
+      <div class="husky-card">
+        <img src="images/husky4.jpg" alt="Pup 4" onclick="openGallery('bella-gallery')" />
+        <p><strong>Unnamed</strong> – 7 weeks old</p>
+      </div>
+      <div class="husky-card">
+        <img src="images/husky5.jpg" alt="Pup 5" onclick="openGallery('rocky-gallery')" />
+        <p><strong>Unnamed</strong> – 8 weeks old</p>
+      </div>
+      <div class="husky-card">
+        <img src="images/husky6.jpg" alt="Pup 6" onclick="openGallery('daisy-gallery')" />
+        <p><strong>Unnamed</strong> – 9 weeks old</p>
+      </div>
+      <div class="husky-card">
+        <img src="images/husky7.jpg" alt="Pup 7" onclick="openGallery('charlie-gallery')" />
+        <p><strong>Unnamed</strong> – 10 weeks old</p>
+      </div>
+      <div class="husky-card">
+        <img src="images/husky8.jpg" alt="Pup 8" onclick="openGallery('molly-gallery')" />
+        <p><strong>Unnamed</strong> – 8 weeks old</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="tabs">
+    <button class="tab-button" onclick="toggleTab('contact-form')">📬 Contact Us</button>
+    <div id="contact-form" class="tab-content">
+      <form action="Pawsomelilhuskies@gmail.com" method="POST" enctype="text/plain">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Your Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <button class="tab-button" onclick="toggleTab('adoption-form')">🐾 Adoption Application</button>
+    <div id="adoption-form" class="tab-content">
+      <form action="Pawsomelilhuskies@gmail.com" method="POST" enctype="text/plain">
+        <label for="applicant-name">Your Name:</label>
+        <input type="text" id="applicant-name" name="applicant-name" required />
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="2" required></textarea>
+
+        <label for="experience">Do you have experience with dogs?</label>
+        <textarea id="experience" name="experience" rows="3"></textarea>
+
+        <label for="preferred-dog">Preferred Husky (if any):</label>
+        <input type="text" id="preferred-dog" name="preferred-dog" />
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>Thank you for visiting our page, we hope to hear from you.</p>
+	</p>Have a wonderful rest of your day.</p>
+  </footer>
+
+  <div id="snowball-gallery" class="lightbox">
+    <span class="close" onclick="closeGallery('snowball-gallery')">&times;</span>
+    <img class="lightbox-img" src="images/husky1.jpg" alt="Snowball 1" />
+    <img class="lightbox-img" src="images/husky1b.jpg" alt="Snowball 2" />
+    <img class="lightbox-img" src="images/husky1c.jpg" alt="Snowball 3" />
+  </div>
+
+  <div id="luna-gallery" class="lightbox">
+    <span class="close" onclick="closeGallery('luna-gallery')">&times;</span>
+    <img class="lightbox-img" src="images/husky2.jpg" alt="Luna 1" />
+    <img class="lightbox-img" src="images/husky2b.jpg" alt="Luna 2" />
+    <img class="lightbox-img" src="images/husky2c.jpg" alt="Luna 3" />
+  </div>
+
+  <div id="max-gallery" class="lightbox">
+    <span class="close" onclick="closeGallery('max-gallery')">&times;</span>
+    <img class="lightbox-img" src="images/husky3.jpg" alt="Max 1" />
+    <img class="lightbox-img" src="images/husky3b.jpg" alt="Max 2" />
+    <img class="lightbox-img" src="images/husky3c.jpg" alt="Max 3" />
+  </div>
+
+  <div id="bella-gallery" class="lightbox">
+    <span class="close" onclick="closeGallery('bella-gallery')">&times;</span>
+    <img class="lightbox-img" src="images/husky4.jpg" alt="Bella 1" />
+    <img class="lightbox-img" src="images/husky4b.jpg" alt="Bella 2" />
+    <img class="lightbox-img" src="images/husky4c.jpg" alt="Bella 3" />
+  </div>
+
+  <div id="rocky-gallery" class="lightbox">
+    <span class="close" onclick="closeGallery('rocky-gallery')">&times;</span>
+    <img class="lightbox-img" src="images/husky5.jpg" alt="Rocky 1" />
+    <img class="lightbox-img" src="images/husky5b.jpg" alt="Rocky 2" />
+    <img class="lightbox-img" src="images/husky5c.jpg" alt="Rocky 3" />
+  </div>
+
+  <div id="daisy-gallery" class="lightbox">
+    <span class="close" onclick="closeGallery('daisy-gallery')">&times;</span>
+    <img class="lightbox-img" src="images/husky6.jpg" alt="Daisy 1" />
+    <img class="lightbox-img" src="images/husky6b.jpg" alt="Daisy 2" />
+    <img class="lightbox-img" src="images/husky6c.jpg" alt="Daisy 3" />
+  </div>
+
+  <div id="charlie-gallery" class="lightbox">
+    <span class="close" onclick="closeGallery('charlie-gallery')">&times;</span>
+    <img class="lightbox-img" src="images/husky7.jpg" alt="Charlie 1" />
+    <img class="lightbox-img" src="images/husky7b.jpg" alt="Charlie 2" />
+    <img class="lightbox-img" src="images/husky7c.jpg" alt="Charlie 3" />
+  </div>
+
+  <div id="molly-gallery" class="lightbox">
+    <span class="close" onclick="closeGallery('molly-gallery')">&times;</span>
+    <img class="lightbox-img" src="images/husky8.jpg" alt="Molly 1" />
+    <img class="lightbox-img" src="images/husky8b.jpg" alt="Molly 2" />
+    <img class="lightbox-img" src="images/husky8c.jpg" alt="Molly 3" />
+  </div>
+  
+  <!-- Parent Lightbox -->
+<div id="lightbox" class="lightbox" onclick="closeParentLightbox()">
+  <span class="close" onclick="closeParentLightbox()">&times;</span>
+  <img id="lightbox-img" class="lightbox-img" src="" alt="Parent Image" />
+</div>
+
+  <script src="snow.js"></script>
+ </body>
+</html>

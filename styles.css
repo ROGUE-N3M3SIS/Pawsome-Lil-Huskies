@@ -70,6 +70,22 @@ header {
   max-width: 500px;
   margin: 0 auto;
 }
+.expanding-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.expanding-gallery img {
+  width: 100%;
+  border-radius: 5px;
+  height: auto;
+  cursor: pointer;
+}
+
 
 /* === Form Styles === */
 form {

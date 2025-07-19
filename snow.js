@@ -89,6 +89,7 @@ function closeGallery(id) {
 
 // === Dark Mode Toggle ===
 
+// Dark mode toggle
 const toggleButton = document.getElementById('darkModeToggle');
 const elementsToToggle = [
   document.body,
@@ -102,26 +103,25 @@ const elementsToToggle = [
   ...document.querySelectorAll('.parent-card')
 ];
 
-// Function to update button text
+// Function to update the toggle button text
 function updateToggleText() {
   const isDark = document.body.classList.contains('dark-mode');
   toggleButton.textContent = isDark ? 'Toggle Light Mode' : 'Toggle Dark Mode';
 }
 
-// Load saved preference
+// Load saved dark mode preference
 if (localStorage.getItem('darkMode') === 'enabled') {
   elementsToToggle.forEach(el => el.classList.add('dark-mode'));
-  updateToggleText();
 }
+updateToggleText(); // <-- Apply correct label on load
 
-// Toggle dark mode on click
+// Toggle dark mode on button click
 toggleButton.addEventListener('click', () => {
-  const isDark = document.body.classList.contains('dark-mode');
   elementsToToggle.forEach(el => el.classList.toggle('dark-mode'));
-  localStorage.setItem('darkMode', isDark ? 'disabled' : 'enabled');
-  updateToggleText();
+  const isNowDark = document.body.classList.contains('dark-mode');
+  localStorage.setItem('darkMode', isNowDark ? 'enabled' : 'disabled');
+  updateToggleText(); // <-- Update label after toggle
 });
-
  // === Parent Lightbox ===
 function openParentLightbox(imgSrc) {
   const lightbox = document.getElementById('lightbox');

@@ -283,3 +283,13 @@ body.dark-mode .tab-content {
   background-color: rgba(30, 30, 30, 0.0);
   color: #f0f0f0;
 }
+/* === Enhancements: Smooth Transitions === */
+body, .tab-button, form, .husky-card, .parent-card {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* === Enhancements: Accessibility Focus === */
+.tab-button:focus,
+form button:focus {
+  outline: 2px solid #3399ff;
+  outline-offset: 2px;
+}

@@ -136,6 +136,7 @@ form button:hover {
   border-radius: 5px;
   cursor: pointer;
   text-align: left;
+  text-decoration: none;
 }
 .tab-button:hover {
   background-color: #3399ff;

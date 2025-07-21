@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Husky Gallery | Pawsome Lil Huskies</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="icon" href="fav1.png" type="image/png"/>
+</head>
+<body>
+  <canvas id="snow-canvas"></canvas>
+
+  <div class="main-container">
+    <header>
+      <button id="darkModeToggle">Toggle Dark Mode</button>
+      <h1>Husky Puppy Gallery</h1>
+      <p>🐶 A showcase of our beautiful pups, past and present 🐶</p>
+      <a href="index.html" class="tab-button" style="max-width: 200px;">← Back to Home</a>
+    </header>
+
+    <section class="gallery">
+      <h2 class="gallery-title">Gallery Highlights</h2>
+      <div class="gallery-intro">
+        <p class="gallery-subtext"><em>(Click photo to enlarge)</em></p>
+      </div>
+
+      <div class="husky-grid">
+        <div class="husky-card">
+          <img src="images/husky1.jpg" alt="Pup 1" onclick="openGallery('gallery1')" />
+          <p><strong>Snowball</strong></p>
+        </div>
+        <div class="husky-card">
+          <img src="images/husky2.jpg" alt="Pup 2" onclick="openGallery('gallery2')" />
+          <p><strong>Luna</strong></p>
+        </div>
+        <div class="husky-card">
+          <img src="images/husky3.jpg" alt="Pup 3" onclick="openGallery('gallery3')" />
+          <p><strong>Max</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <div id="gallery1" class="lightbox">
+      <span class="close" onclick="closeGallery('gallery1')">&times;</span>
+      <img class="lightbox-img" src="images/husky1.jpg" alt="Snowball 1"/>
+      <img class="lightbox-img" src="images/husky1b.jpg" alt="Snowball 2"/>
+      <img class="lightbox-img" src="images/husky1c.jpg" alt="Snowball 3"/>
+    </div>
+
+    <div id="gallery2" class="lightbox">
+      <span class="close" onclick="closeGallery('gallery2')">&times;</span>
+      <img class="lightbox-img" src="images/husky2.jpg" alt="Luna 1"/>
+      <img class="lightbox-img" src="images/husky2b.jpg" alt="Luna 2"/>
+      <img class="lightbox-img" src="images/husky2c.jpg" alt="Luna 3"/>
+    </div>
+
+    <div id="gallery3" class="lightbox">
+      <span class="close" onclick="closeGallery('gallery3')">&times;</span>
+      <img class="lightbox-img" src="images/husky3.jpg" alt="Max 1"/>
+      <img class="lightbox-img" src="images/husky3b.jpg" alt="Max 2"/>
+      <img class="lightbox-img" src="images/husky3c.jpg" alt="Max 3"/>
+    </div>
+
+    <footer>
+      <p>© Pawsome Lil Huskies — Dedicated to raising happy, healthy pups</p>
+    </footer>
+  </div>
+
+  <script src="snow.js"></script>
+</body>
+</html>
